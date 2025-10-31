@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/login-request.js", "use": "@vercel/node" },
+    { "src": "api/verify-login.js", "use": "@vercel/node" },
+    { "src": "api/loja.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/login-request", "dest": "api/login-request.js" },
+    { "src": "/api/verify-login", "dest": "api/verify-login.js" },
+    { "src": "/api/loja", "dest": "api/loja.js" }
+  ]
+}
