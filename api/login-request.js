@@ -1,4 +1,4 @@
-import { connectwhatsBot } from "../../scripts/database.js";
+import { connectwhatsBot } from "../scripts/database.js";
 
 export default async function handler(req, res) {
   // 🔹 CORS completo
@@ -40,3 +40,4 @@ export default async function handler(req, res) {
 
   return res.status(200).json({ message: "Código gerado! Aguarde o envio no WhatsApp." });
 }
+
