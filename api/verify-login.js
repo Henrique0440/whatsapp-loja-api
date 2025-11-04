@@ -9,8 +9,14 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
-  if (req.method === "OPTIONS") return res.status(204).end();
-  if (req.method !== "POST") return res.status(405).json({ error: "Método não permitido" });
+  if (req.method === "OPTIONS") {
+    return res.status(204).end(); // ✅ retorna aqui
+  }
+
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Método não permitido" });
+  }
+
 
   const { numero, codigo } = req.body;
   if (!numero || !codigo) return res.status(400).json({ error: "Número e código são obrigatórios." });
@@ -35,4 +41,5 @@ export default async function handler(req, res) {
 
   return res.status(200).json({ message: "Login confirmado!", token, lojaId: loja.lojaId });
 }
+
 
