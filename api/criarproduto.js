@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     }
 
     // Criar ID único
-    const id = Date.now().toString();
+    let id = Math.random().toString(36).substring(2, 10)
 
     const novoProduto = {
       id,
