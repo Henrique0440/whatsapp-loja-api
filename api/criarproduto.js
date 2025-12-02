@@ -43,7 +43,7 @@ export default async function handler(req, res) {
     const novoProduto = {
       id,
       nome,
-      descricao: descricao || "",
+      descricao: descricao || "Sem Descrição",
       preco: Number(preco),
       criadoEm: new Date(),
     };
