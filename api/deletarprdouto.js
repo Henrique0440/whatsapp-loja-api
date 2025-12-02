@@ -1,4 +1,4 @@
-import { connectwhatsBot } from "../../scripts/database.js";
+import { connectwhatsBot } from "../scripts/database.js";
 import jwt from "jsonwebtoken";
 
 const JWT_SECRET = process.env.JWT_SECRET || "senha_muito_secreta";
