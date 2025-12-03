@@ -7,9 +7,7 @@
 
     { "src": "api/criarproduto.js", "use": "@vercel/node" },
     { "src": "api/editarproduto.js", "use": "@vercel/node" },
-    { "src": "api/deletarproduto.js", "use": "@vercel/node" },
-
-    { "src": "api/get-whats-status.js", "use": "@vercel/node" }
+    { "src": "api/deletarproduto.js", "use": "@vercel/node" }
   ],
   "routes": [
     { "src": "/api/login-request", "dest": "api/login-request.js" },
@@ -18,8 +16,6 @@
 
     { "src": "/api/criarproduto", "dest": "api/criarproduto.js" },
     { "src": "/api/editarproduto", "dest": "api/editarproduto.js" },
-    { "src": "/api/deletarproduto", "dest": "api/deletarproduto.js" },
-
-    { "src": "/api/get-whats-status", "dest": "api/get-whats-status.js" }
+    { "src": "/api/deletarproduto", "dest": "api/deletarproduto.js" }
   ]
 }
